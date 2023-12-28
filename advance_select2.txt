@@ -1,0 +1,35 @@
+problem link:
+https://www.hackerrank.com/challenges/the-pads/problem?isFullScreen=true
+
+approach 
+
+1. Get names and 1 character from their profession, using left() and concat()
+
+2. get count of occuption, group them by occuation amd 
+
+3. first order by count opf occupation and then order by alphabetically by profession.
+
+Query:
+
+
+SELECT 
+    CONCAT(NAME, '(', LEFT(OCCUPATION, 1), ')' )
+FROM
+    OCCUPATIONS
+ORDER BY
+    NAME;
+
+SELECT 
+    CONCAT('There are a total of',' ', COUNT(OCCUPATION), ' ', LOWER(OCCUPATION), 's.')
+    
+FROM 
+    OCCUPATIONS
+GROUP BY
+    OCCUPATION
+ORDER BY
+    COUNT(OCCUPATION), LOWER(OCCUPATION);
+    
+
+    
+
+    
