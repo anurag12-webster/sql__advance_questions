@@ -21,7 +21,6 @@ ORDER BY
 
 SELECT 
     CONCAT('There are a total of',' ', COUNT(OCCUPATION), ' ', LOWER(OCCUPATION), 's.')
-    
 FROM 
     OCCUPATIONS
 GROUP BY
